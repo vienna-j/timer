@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>집중 타이머</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <div class="header">
+      <div class="logo-wrap">
+        <img src="logo.png" alt="로고" class="logo-img">
+      </div>
+      <h1 class="title">집중 타이머</h1>
+    </div>
+
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 240 240">
+        <circle class="ring-bg" cx="120" cy="120" r="108"></circle>
+        <circle class="ring-progress" id="ringProgress" cx="120" cy="120" r="108"></circle>
+      </svg>
+      <div class="ring-center">
+        <span id="timeDisplay" class="time-display">15:00</span>
+        <span id="statusLabel" class="status-label">대기 중</span>
+      </div>
+    </div>
+
+    <div class="presets">
+      <button class="preset-btn" data-minutes="15">15분</button>
+      <button class="preset-btn" data-minutes="30">30분</button>
+    </div>
+
+    <div class="custom-row">
+      <input type="number" id="customMinutes" class="custom-input" placeholder="분 입력" min="1" max="180">
+      <button id="customBtn" class="custom-btn">설정</button>
+    </div>
+
+    <div class="controls">
+      <button id="toggleBtn" class="control-btn primary" disabled>시작</button>
+      <button id="resetBtn" class="control-btn">리셋</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
